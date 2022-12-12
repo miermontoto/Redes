@@ -1,0 +1,4 @@
+$ sudo tcprewrite --infile VoIP.pcap --outfile ejercicio2.pcap --srcipmap 0.0.0.0/0:192.168.10.2 --dstipmap 0.0.0.0/0:111.111.111.111 --enet-smac CC:BB:AA:CC:BB:AA --enet-dmac 33:22:11:33:22:11 --fixcsum
+$ sudo tcpreplay --loop 8 --intf1 enp0s3 ejercicio2.pcap
+
+# Suponiendo que la interfaz por la que se quiere enviar las peticiones es "enp0s3".
